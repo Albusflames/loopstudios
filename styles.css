@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;700&display=swap');
+html {
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+    margin: 0px;
+}
+header {
+    background-image: url('images/mobile/image-hero.jpg');
+    background-size: cover;
+    height: 600px;
+    font-weight: 700;
+    padding: 40px 20px 0px 20px;
+}
+header section {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+header section span {
+    font-size: 30px;
+    color: white;
+}
+.exp-btn-con {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+}
+.exp-btn {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+.exp-btn::after, .exp-btn::before {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+.exp-btn::before {
+    transform: translateY(-7px);
+}
+.exp-btn::after {
+    transform: translateY(7px);
+}
+.exp-btn-con.open .exp-btn{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.exp-btn-con.open .exp-btn::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.exp-btn-con.open .exp-btn::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+header .nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background: hsl(0, 0%, 0%);
+    opacity: 0;
+    position: absolute;
+    height: 500px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    color: white;
+    z-index: 5;
+    padding: 0px 0px 0px 40px;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+header .nav span {
+    font-weight: 200;
+    font-size: 30px;
+}
+header .nav.open {
+    display: flex;
+}
+header .nav.visible {
+    opacity: 1;
+}
+header .header-center {
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+    border:  2px solid white;
+    padding: 20px;
+    position: relative;
+    top: 25%;
+}
+header.open {
+    background-image: unset;
+    background-color:hsl(0, 0%, 0%);
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 20px 100px 20px;
+}
+.first section:nth-child(2) {
+    padding: 0px 10px 0px 10px;
+}
+.first img {
+    width: 100%;
+}
+.first section h1, .first section p {
+    text-align: center;
+}
+.first section h1 {
+    font-size: 40px;
+    font-weight: 200;
+}
+.first section p {
+    line-height: 30px;
+    color: hsl(0, 0%, 41%);
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.second .head button {
+    display: none;
+}
+.second .head h1 {
+    display: inline;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;   
+}
+.second .head {
+    margin: 0px 0px 50px 0px;
+}
+.second .body {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.second .body div {
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+} 
+.second .body div p{
+    width: 55%;
+    text-align: bottom;
+}
+
+.second .body div:nth-child(1) {
+    background-image: url('images/mobile/image-deep-earth.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+ 
+}
+.second .body div:nth-child(2) {
+    background-image: url('images/mobile/image-night-arcade.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+    
+}
+.second .body div:nth-child(3) {
+    background-image: url('images/mobile/image-soccer-team.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second .body div:nth-child(4) {
+    background-image: url('images/mobile/image-grid.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second .body div:nth-child(5) {
+    background-image: url('images/mobile/image-from-above.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second .body div:nth-child(6) {
+    background-image: url('images/mobile/image-pocket-borealis.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second .body div:nth-child(7) {
+    background-image: url('images/mobile/image-curiosity.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second .body div:nth-child(8) {
+    background-image: url('images/mobile/image-fisheye.jpg');
+    background-size: 100% 100%;
+    height: 100px;
+    width: 80%;
+    color: white;
+}
+.second > button {
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    background-color: white;
+    border: 2px solid hsl(0, 0%, 41%);
+    margin: 40px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+.second > button:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+}
+footer {
+    margin: 20px 0px 20px 0px;
+    padding: 30px 0px 30px 0px ;
+}
+footer, footer div, footer div .bottom-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+footer div .bottom-nav {
+    line-height: 40px;
+}
+footer div .contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+footer div .bottom-nav a{
+    cursor: pointer;
+}
+footer div .contact a{
+    cursor: pointer;
+}
+footer div p {
+    color:hsl(0, 0%, 41%);
+    text-align: center;
+}
+@media screen and (min-width: 800px) {
+    .exp-btn-con {
+        display: none;
+    }
+    header {
+        background-image: url('images/mobile/image-hero.jpg');
+        background-size: cover;
+        height: 600px;
+        width: 100%;
+        font-weight: 700;
+        padding: 40px 0px 0px 100px;
+    }
+    header .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: unset;
+        opacity: 1;
+        position: absolute;
+        height: auto;
+        top: 55px;
+        gap: 20px;
+        left: 30%;
+        width: 100%;
+        color: white;
+        z-index: 5;
+        padding: 0px 0px 0px 0px;
+        line-height: unset;
+        transition: all 0.5s ease-in-out;
+    }
+    header .nav span {
+        position: relative;
+        cursor: pointer;
+    }
+    header .nav span:after{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: white;
+        top: 15px;
+        left: 10%;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+    header .nav span:hover::after{
+        width:80%;
+    }
+    header .nav span {
+        font-weight: 200;
+        font-size: 10px;
+    }
+    header .header-center {
+        font-size: 40px;
+        font-weight: 200;
+        max-width: 400px;
+        color: white;
+        border:  2px solid white;
+        padding: 20px;
+        position: relative;
+        top: 25%;
+    }
+    .first {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 100px 20px 100px 20px;
+    }
+    .first section {
+        width: 50%;
+    }
+    .first section:nth-child(2) {
+        width: 40%;
+        padding: 0px 0px 0px 50px;
+        background-color: white;
+        position: relative;
+        top: 150px;
+        left: -100px;
+    }
+    .first section:nth-child(2) h1 {
+        margin-bottom: 10px;
+    }
+    .first section:nth-child(2) p, .first section:nth-child(2) h1 {
+        text-align: left;
+    }
+    .second {
+        padding: 40px;
+    }
+    .second .head button {
+        display: inline;
+    }
+    .second .head h1 {
+        display: inline;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 400;   
+    }
+    .second .head {
+        margin: 0px 0px 50px 0px;
+        display: flex;
+    }
+    .second .body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .second .body div {
+        height: 100%;
+        width: 100%;
+        color: white;
+        padding: 20px;
+        font-size: 30px;
+        font-weight: 400;
+        height: 350px!important;
+        color: white;
+        position: relative;
+    } 
+    .second .body div p{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+    }
+    
+    .second .body div:nth-child(1) {
+        background-image: url('images/desktop/image-deep-earth.jpg');
+        background-size: 100% 100%;
+        width: 80%;
+    }
+    .second .body div:nth-child(2) {
+        background-image: url('images/desktop/image-night-arcade.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(3) {
+        background-image: url('images/desktop/image-soccer-team.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(4) {
+        background-image: url('images/desktop/image-grid.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(5) {
+        background-image: url('images/desktop/image-from-above.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(6) {
+        background-image: url('images/desktop/image-pocket-borealis.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(7) {
+        background-image: url('images/desktop/image-curiosity.jpg');
+        background-size: 100% 100%;
+    }
+    .second .body div:nth-child(8) {
+        background-image: url('images/desktop/image-fisheye.jpg');
+        background-size: 100% 100%;
+    }
+    .second > button {
+      display: none;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px ;
+        gap: 30%;
+    }
+    footer div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: unset;
+        align-self: start;
+    }
+    footer div h1 {
+        margin: 0px 0px 0px 0px;
+        padding: 20px 0px 0px 0px;
+    }
+    footer div:nth-child(2) {
+        align-self: end;
+    }
+    footer div .bottom-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        line-height: 40px;
+    }
+    footer div .contact {
+        display: flex;
+        align-self: end;
+        gap: 15px;
+        margin-top: 50px;
+    }
+    footer div p {
+        color:hsl(0, 0%, 41%);
+        display: flex;
+        text-align: center;
+        align-self: end;;
+    }
+    footer div .contact {
+        display: flex;
+        gap: 15px;
+        margin-top: 0px;
+    }
+    .bottom-nav a {
+        cursor: pointer;
+        position: relative;
+    }
+    .bottom-nav a:after{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: white;
+        top: 30px;
+        left: 10%;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+    .bottom-nav a:hover::after{
+        width:80%;
+    }
+    .second .head{
+        width: 100%;
+        position: relative;
+    }
+    .second .head button {
+        position: absolute;
+        right: 0px;
+        display: inline;
+        text-align: center;
+        padding: 10px;
+        width: 120px;
+        background-color: white;
+        border: 2px solid hsl(0, 0%, 41%);
+        margin: 40px;
+        letter-spacing: 5px;
+    }
+    .second .head button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+}
